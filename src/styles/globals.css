@@ -1,27 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: #f8faf7;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* custom css using tailwind */
+.flexs {
+  @apply flex items-center;
+}
+.justify-centers {
+  @apply flex justify-center items-center;
+}
+
+.justify-betweens {
+  @apply flex justify-between items-center;
+}
+.transitions {
+  @apply transition duration-300 ease-in;
+}
+
+/* scroll Bar */
+.right::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  width: 0;
+}
+
+.box-shadow {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.selected,
+.selected a {
+  background-color: #017efb;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+@layer base {
+  /* .containerr {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 340px;
+    grid-template-areas:
+      'n n n n n n n n n n n n'
+      'c c c c c c c c c c r r'
+      'c c c c c c c c c c r r';
+  } */
+  /* .right {
+    display: none;
+    grid-template-areas:
+      'n n n n n n n n n n n n'
+      'c c c c c c c c c c c c'
+      'c c c c c c c c c c c c';
+  } */
+
+  /* Modify the grid template to remove the right sidebar column when the sidebar isn't displayed */
+
+  .nav {
+    grid-area: n;
+  }
+
+  .content {
+    grid-area: c;
+    /* height: calc(100vh - 50px) !important; */
+  }
+  .right {
+    grid-area: r;
+    /* height: calc(100vh - 85px); */
+  }
+  @media only screen and (max-width: 1279.8px) {
+    .containerr {
+      grid-template-areas:
+        'n n n n n n n n n n n n'
+        'c c c c c c c c c c c c'
+        'c c c c c c c c c c c c';
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Sidebar */
+.css-1wvake5 {
+  width: 270px !important;
+  min-width: 270px !important;
+}
+.css-1wvake5.ps-collapsed {
+  width: 80px !important;
+  min-width: 80px !important;
+}
+.css-1l5fxv3 {
+  width: 250px !important;
+  margin-top: 1rem !important;
+  padding: 1rem 0;
+}
+.menuItem:hover .normal-icon {
+  display: none;
+}
+.menuItem:hover .hover-icon {
+  display: block;
+}
+
+.sidebar li:hover a .ps-menu-suffix div {
+  background-color: #fff;
+  color: #333;
+}
+
+.css-in4fye {
+  margin-right: -4px !important;
+}
+.css-honxw6,
+.css-jn69v9 {
+  width: 10px !important;
+  height: 10px !important;
+}
+.subMenuItem .ps-menu-button:hover .normal-icons,
+.selected .normal-icon {
+  display: none;
+}
+.subMenuItem .ps-menu-button:hover .hover-icons,
+.selected .hover-icon {
+  display: block;
+}
+.subMenuItem .ps-menu-button:hover .css-honxw6,
+.subMenuItem .ps-menu-button:hover .css-jn69v9 {
+  color: #fff;
 }
