@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
   useProSidebar,
+  SidebarProps,
 } from 'react-pro-sidebar';
 
 const menuItemStyles = {
@@ -34,14 +35,16 @@ const menuItemStyles = {
     },
   },
 };
+type MySidebarProps = SidebarProps & {
+  selectedMenu: string;
+};
 
 const DashboardSidebar = () => {
-  const [selectedMenu, setSelectedMenu] = useState('dashboard');
-  const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
-    useProSidebar();
+  const [selectedMenu, setSelectedMenu] = useState<string>('dashboard');
+  const { collapseSidebar, collapsed } = useProSidebar();
   return (
     <div className="sidebar relative h-screen overflow-y-auto">
-      <Sidebar selectedMenu={selectedMenu}>
+      <Sidebar>
         <main>
           <Menu className="bg-white">
             {collapsed ? (
@@ -71,33 +74,68 @@ const DashboardSidebar = () => {
             <div
               className={`bg-white px-3 pt-2 ${collapsed ? 'mb-0' : 'mb-12'}`}
             >
-              {sidebarMenu.map((menu, i) => (
-                <MenuItem
-                  component={<Link href={menu.link} />}
-                  onClick={() => setSelectedMenu(menu.link)}
-                  className={`menuItem ${
-                    selectedMenu === menu.link ? 'selected' : ''
-                  }`}
-                >
-                  <div className="flex items-center gap-3 ">
-                    <Image
-                      src={menu.icon}
-                      width={18}
-                      height={18}
-                      className="normal-icon"
-                      alt="dashboard"
-                    />
-                    <Image
-                      src={menu.hoverIcon}
-                      width={18}
-                      height={18}
-                      className="hover-icon hidden"
-                      alt="dashboard"
-                    />
-                    <p>{menu.title}</p>
-                  </div>
-                </MenuItem>
-              ))}
+              {sidebarMenu.map((menu, i) => {
+                if (menu.type === 'menu') {
+                  return (
+                    <MenuItem
+                      component={<Link href={menu.link} />}
+                      onClick={() => setSelectedMenu(menu.link)}
+                      className={`menuItem ${
+                        selectedMenu === menu.link ? 'selected' : ''
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 ">
+                        <Image
+                          src={menu.icon}
+                          width={18}
+                          height={18}
+                          className="normal-icon"
+                          alt="dashboard"
+                        />
+                        <Image
+                          src={menu.hoverIcon}
+                          width={18}
+                          height={18}
+                          className="hover-icon hidden"
+                          alt="dashboard"
+                        />
+                        <p>{menu.title}</p>
+                      </div>
+                    </MenuItem>
+                  );
+                } else if (menu.type === 'dropdown') {
+                  return (
+                    <Menu className="px-4">
+                      <MenuItem
+                        component={<Link href={menu.link} />}
+                        key={i}
+                        onClick={() => setSelectedMenu(menu.title)}
+                        className={`menuItem ${
+                          selectedMenu === menu.title ? 'selected' : ''
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 ">
+                          <Image
+                            src={menu.icon}
+                            width={16}
+                            height={16}
+                            className="normal-icon"
+                            alt="dashboard"
+                          />
+                          <Image
+                            src={menu.hoverIcon}
+                            width={16}
+                            height={16}
+                            className="hover-icon hidden"
+                            alt="dashboard"
+                          />
+                          <p>{menu.title}</p>
+                        </div>
+                      </MenuItem>
+                    </Menu>
+                  );
+                }
+              })}
             </div>
           </Menu>
         </main>
@@ -110,6 +148,7 @@ export default DashboardSidebar;
 const sidebarMenu = [
   {
     id: 1,
+    type: 'menu',
     link: '/dashboard',
     icon: '/images/sidebar/dashboard.svg',
     hoverIcon: '/images/sidebar/dashboard-H.svg',
@@ -117,12 +156,34 @@ const sidebarMenu = [
   },
   {
     id: 2,
+    type: 'menu',
     link: '/property',
     icon: '/images/sidebar/building.png',
     hoverIcon: '/images/sidebar/property-H.svg',
     title: 'Property',
   },
+  {
+    id: 3,
+    type: 'dropdown',
+    link: '/property',
+    icon: '/images/sidebar/building.png',
+    hoverIcon: '/images/sidebar/dashboard-H.svg',
+    title: 'Accounting',
+    children: [
+      {
+        id: '3a',
+        link: '/interfaces/property',
+        icon: '/images/sidebar/GAcounting.svg',
+        hoverIcon: '/images/sidebar/GAcounting-H.svg',
+        title: 'General Accounting',
+      },
+      {
+        id: '3b',
+        link: '/accounting/rentalDashboard',
+        icon: '/images/sidebar/rental.svg',
+        hoverIcon: '/images/sidebar/rental-H.svg',
+        title: 'Rental Dashboard',
+      },
+    ],
+  },
 ];
-interface SidebarProps {
-  selectedMenu: string;
-}

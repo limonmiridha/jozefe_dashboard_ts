@@ -8,6 +8,7 @@ import RentalRightbar from '@/components/Rightbar/RentalRightbar';
 
 const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
+  //   We need rightbar in these route.
   const showRightbar =
     router.pathname === '/accounting/rentalDashboard' ||
     router.pathname === '/dashboard' ||
