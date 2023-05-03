@@ -377,7 +377,7 @@ const sidebarMenu = [
     id: 9,
     type: 'menu',
     title: 'Tasks',
-    link: '/task',
+    link: '/tasks',
     icon: '/images/sidebar/task.svg',
     hoverIcon: '/images/sidebar/task-H.svg',
   },
