@@ -31,9 +31,9 @@ const GlobalDataTable = ({
   const [filters, setFilters] = useState({});
   const [globalFilterValue, setGlobalFilterValue] = useState('');
 
-  const clearFilter = (): void => {
-    initFilters();
-  };
+  // const clearFilter = (): void => {
+  //   initFilters();
+  // };
   const onGlobalFilterChange = (e: any) => {
     const value = e.target.value;
     let _filters: any = { ...filters };
@@ -59,7 +59,7 @@ const GlobalDataTable = ({
           </span>
           <button
             type="button"
-            onClick={clearFilter}
+            // onClick={clearFilter}
             className="absolute right-1"
           >
             <Image
@@ -117,7 +117,7 @@ const GlobalDataTable = ({
         paginator
         rows={5}
         rowsPerPageOptions={[5, 10, 25, 50]}
-        selectionMode={rowClick ? null : 'checkbox'}
+        // selectionMode={rowClick ? null : 'checkbox'}
         selection={selectedProducts}
         onSelectionChange={(e: any) => setSelectedProducts(e.value)}
         dataKey="id"
