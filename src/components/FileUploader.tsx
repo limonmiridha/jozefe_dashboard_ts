@@ -56,7 +56,7 @@ const FileUploader = ({ text, image }: FileUploader) => {
         >
           <div className=" bg-[#f1f7fe] border border-[#017efa] border-dashed rounded-lg flex justify-center items-center flex-col py-8">
             <Image
-              src="/images/property/Folder.svg"
+              src="/images/Folder.svg"
               width={100}
               height={90}
               alt="folder"
@@ -109,7 +109,7 @@ const FileUploader = ({ text, image }: FileUploader) => {
         >
           <div className=" bg-[#f1f7fe] border border-[#017efa] border-dashed rounded-lg flex justify-center items-center flex-col py-8">
             <Image
-              src="/images/property/Folder.svg"
+              src="/images/Folder.svg"
               width={100}
               height={90}
               alt="folder"

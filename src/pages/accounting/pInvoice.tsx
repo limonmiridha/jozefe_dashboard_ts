@@ -23,7 +23,7 @@ const pInvoice = () => {
             <p className="text-lg font-bold">Property Invoice</p>
             <div className="grid xs:grid-cols-2 gap-4 mt-4">
               <Input
-                img="/images/accounting/debit.svg"
+                img="/images/inputIcon/debit.svg"
                 name="Debit"
                 type="name"
               />
@@ -31,12 +31,12 @@ const pInvoice = () => {
             </div>
             <div className="grid xs:grid-cols-2 gap-4 mt-4">
               <Input
-                img="/images/accounting/money.svg"
+                img="/images/inputIcon/money.svg"
                 name="Price"
                 type="name"
               />
               <Input
-                img="/images/accounting/recruit.svg"
+                img="/images/inputIcon/recruit.svg"
                 name="Recurring Payment (Days)"
                 type="name"
               />

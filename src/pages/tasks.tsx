@@ -77,7 +77,7 @@ const tasks = () => {
               <BsThreeDotsVertical />
             </div>
             <Link href="" onClick={() => setShowModal(true)}>
-              <Card hover={true} cls="text-center">
+              <Card hover={true} cls="text-center py-1">
                 +
               </Card>
             </Link>
@@ -99,7 +99,7 @@ const tasks = () => {
             </div>
             <div>
               <Link href="" onClick={() => setShowModal(true)}>
-                <Card hover={true} cls="text-center">
+                <Card hover={true} cls="text-center py-1">
                   + Add Task
                 </Card>
               </Link>
@@ -121,7 +121,7 @@ const tasks = () => {
             </div>
             <div>
               <Link href="" onClick={() => setShowModal(true)}>
-                <Card hover={true} cls="text-center">
+                <Card hover={true} cls="text-center py-1">
                   +
                 </Card>
               </Link>

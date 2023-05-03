@@ -1,7 +1,5 @@
-import Card from '@/components/GlobalCard';
-import Image from 'next/image';
 import React from 'react';
-
+import Card from '@/components/GlobalCard';
 import GlobalDataTable from '@/components/GlobalDataTable';
 import { newsColumn, newsData } from '@/data/TableData';
 import { TitleHeader, InnerHeader } from '@/components/Headers';

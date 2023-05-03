@@ -4,6 +4,7 @@ import Layout from '@/Layout';
 import '@/styles/globals.css';
 import '../styles/sidebar.css';
 import '../styles/dataTable.css';
+import '../styles/calendar.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

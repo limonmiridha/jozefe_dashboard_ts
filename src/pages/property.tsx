@@ -205,37 +205,37 @@ const propertyType = [
   {
     value: 'Property Type',
     label: 'Property Type',
-    image: '/images/property/property1.svg',
+    image: '/images/inputIcon/propertyType.svg',
   },
   {
     value: 'Home',
     label: 'Home',
-    image: '/images/property/property2.svg',
+    image: '/images/inputIcon/home.svg',
   },
   {
     value: 'Apartment',
     label: 'Apartment',
-    image: '/images/property/property3.svg',
+    image: '/images/inputIcon/apartment.svg',
   },
   {
     value: 'Studios',
     label: 'Studios',
-    image: '/images/property/property4.svg',
+    image: '/images/inputIcon/studios.svg',
   },
   {
     value: 'Condos',
     label: 'Condos',
-    image: '/images/property/property5.svg',
+    image: '/images/inputIcon/condos.svg',
   },
   {
     value: 'Commercial',
     label: 'Commercial',
-    image: '/images/property/property6.svg',
+    image: '/images/inputIcon/commercial.svg',
   },
   {
     value: 'Other',
     label: 'Other',
-    image: '/images/property/property7.svg',
+    image: '/images/inputIcon/other.svg',
   },
 ];
 const propertyRole = [
@@ -252,7 +252,7 @@ const propertyRole = [
   {
     value: 'Owner',
     label: 'Owner',
-    image: '/images/property/owner.svg',
+    image: '/images/inputIcon/owner.svg',
   },
   {
     value: 'Company',

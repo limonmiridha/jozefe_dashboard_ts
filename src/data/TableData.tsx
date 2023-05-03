@@ -274,7 +274,7 @@ export const memberPendingColumn = [
 export const memberPendingData = [
   {
     id: 1,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Harper Stevens',
     room: 'Room 22',
     pending: '1,172.00',
@@ -282,7 +282,7 @@ export const memberPendingData = [
   },
   {
     id: 2,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Ethan Smith',
     room: 'Room 09',
     pending: '225.00',
@@ -290,7 +290,7 @@ export const memberPendingData = [
   },
   {
     id: 3,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Ava Martinez',
     room: 'Studio 11',
     pending: '316.00',
@@ -298,7 +298,7 @@ export const memberPendingData = [
   },
   {
     id: 4,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Jackson Chen',
     room: 'Room 22',
     pending: '2,500.00',
@@ -306,7 +306,7 @@ export const memberPendingData = [
   },
   {
     id: 5,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Jackson Chen',
     room: 'Room 22',
     pending: '1,172.00',
@@ -314,7 +314,7 @@ export const memberPendingData = [
   },
   {
     id: 6,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Ghostbusters',
     room: 'Room 22',
     pending: '105.00',
@@ -322,7 +322,7 @@ export const memberPendingData = [
   },
   {
     id: 7,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Ghostbusters',
     room: 'Room 22',
     pending: '1,172.00',
@@ -330,7 +330,7 @@ export const memberPendingData = [
   },
   {
     id: 8,
-    image: '/images/proImg1.png',
+    image: '/images/table/proImg1.svg',
     name: 'Ghostbusters',
     room: 'Room 22',
     pending: '1,172.00',

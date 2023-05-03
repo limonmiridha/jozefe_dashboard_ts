@@ -44,7 +44,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalRent.svg',
     title1: 'Total Rent Income',
     value1: '0',
-    triangle: '/images/yellowTri.svg',
+    triangle: '/images/triangle/yellowTri.svg',
     link: '/incidents',
   },
   {
@@ -52,7 +52,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalPayment.svg',
     title1: 'Total Payment Defaults',
     value1: '0',
-    triangle: '/images/indigoTri.svg',
+    triangle: '/images/triangle/indigoTri.svg',
     link: '/incidents',
   },
   {
@@ -60,7 +60,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalMonth.svg',
     title1: 'Total Month Payed',
     value1: '55',
-    triangle: '/images/deepBlueTri.svg',
+    triangle: '/images/triangle/deepBlueTri.svg',
     link: '/incidents',
   },
   {
@@ -68,7 +68,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalNotPaid.svg',
     title1: 'Total Rent Not Paid',
     value1: '45',
-    triangle: '/images/redTri.svg',
+    triangle: '/images/triangle/redTri.svg',
     link: '/incidents',
   },
   {
@@ -76,7 +76,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalPending.svg',
     title1: 'Total Rent In Pending',
     value1: '45',
-    triangle: '/images/blueTri.svg',
+    triangle: '/images/triangle/blueTri.svg',
     link: '/incidents',
   },
   {
@@ -84,7 +84,7 @@ export const rentalDashboardCards = [
     titleImg: '/images/rental/TotalPaid.svg',
     title1: 'Total Rent Paid',
     value1: '45',
-    triangle: '/images/blueTri.svg',
+    triangle: '/images/triangle/blueTri.svg',
     link: '/incidents',
   },
 ];
@@ -111,7 +111,7 @@ export const incidentsCards = [
     titleImg: '/images/incidents/newIncidents.svg',
     title1: 'New Incident',
     value1: '01',
-    triangle: '/images/yellowTri.svg',
+    triangle: '/images/triangle/yellowTri.svg',
     link: '/incidents',
   },
   {
@@ -119,7 +119,7 @@ export const incidentsCards = [
     titleImg: '/images/incidents/pendingIncident.svg',
     title1: 'Incident Pending',
     value1: '254',
-    triangle: '/images/indigoTri.svg',
+    triangle: '/images/triangle/indigoTri.svg',
     link: '/incidents',
   },
   {
@@ -127,7 +127,7 @@ export const incidentsCards = [
     titleImg: '/images/incidents/progressIncidents.svg',
     title1: 'In Progress',
     value1: '55',
-    triangle: '/images/blueTri.svg',
+    triangle: '/images/triangle/blueTri.svg',
     link: '/incidents',
   },
   {
@@ -135,7 +135,7 @@ export const incidentsCards = [
     titleImg: '/images/incidents/closeIncident.svg',
     title1: 'Incident Close',
     value1: '45',
-    triangle: '/images/redTri.svg',
+    triangle: '/images/triangle/redTri.svg',
     link: '/incidents',
   },
   {
@@ -143,7 +143,7 @@ export const incidentsCards = [
     titleImg: '/images/incidents/priorityIncidents.svg',
     title1: 'High Priority',
     value1: '45',
-    triangle: '/images/deepBlueTri.svg',
+    triangle: '/images/triangle/deepBlueTri.svg',
     link: '/incidents',
   },
   {

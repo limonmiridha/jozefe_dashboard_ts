@@ -89,12 +89,9 @@ const GlobalDataTable = ({
   };
 
   const header = renderHeader();
-  //   const imageBodyTemplate = (data) => {
-  //     return <Image src={data.image} alt={data.image} width={32} height={32} />;
-  //   };
 
   return (
-    <div className="py-4 mb-16 box-shadow relative">
+    <div className="bg-white py-4 mb-16 box-shadow relative">
       {tableHeader && (
         <div className="justify-betweens p-4 border-b">
           <div className="flexs gap-4">
@@ -107,7 +104,7 @@ const GlobalDataTable = ({
             />
             <p className="font-semibold">{tableTitle}</p>
           </div>
-          {capsuleBtn ? <CapsuleBtn /> : <CurrencyBtn />}
+          {capsuleBtn ? <CapsuleBtn /> : null}
         </div>
       )}
 
