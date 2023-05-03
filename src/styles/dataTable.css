@@ -1,0 +1,74 @@
+.p-inputtext {
+  background-color: #fafafa !important;
+  border: none !important;
+  /* width: 18rem; */
+}
+/* @media screen and (max-width: 768px) {
+    .p-inputtext {
+      width: 14rem;
+    }
+  } */
+.p-datatable-header {
+  background-color: white !important;
+  border: none !important;
+}
+.p-datatable-thead,
+.p-datatable-tbody {
+  white-space: nowrap;
+}
+.p-datatable .p-datatable-tbody > tr > td img {
+  /* padding: 0.5rem !important; */
+  max-width: 1rem !important;
+}
+.p-button {
+  border: none !important;
+  font-size: 14px !important;
+  white-space: nowrap;
+}
+.p-button span {
+  font-weight: 500;
+}
+
+.viewBtn.p-button:hover {
+  background-color: #00ab8c !important;
+}
+.edit.p-button {
+  background-color: #017efa !important;
+}
+.edit.p-button:hover {
+  background-color: #0371df !important;
+}
+.delete.p-button {
+  background-color: #fd717a !important;
+}
+.delete.p-button:hover {
+  background-color: #f9616b !important;
+}
+.reminder.p-button {
+  background-color: #51cbff !important;
+}
+.reminder.p-button:hover {
+  background-color: #1fb4f4 !important;
+}
+/* .css-jn69v9 .css-honxw6 {
+    width: 10px !important;
+    height: 10px !important;
+  } */
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-last,
+.p-paginator .p-dropdown {
+  display: none;
+}
+.p-paginator {
+  justify-content: end !important;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background-color: #5671ff !important;
+  color: #fff !important;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 6px !important;
+  min-width: 2rem !important;
+  height: 2rem !important;
+}

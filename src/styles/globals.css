@@ -45,31 +45,9 @@ body {
 }
 
 @layer base {
-  /* .containerr {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto 340px;
-    grid-template-areas:
-      'n n n n n n n n n n n n'
-      'c c c c c c c c c c r r'
-      'c c c c c c c c c c r r';
-  } */
-  /* .right {
-    display: none;
-    grid-template-areas:
-      'n n n n n n n n n n n n'
-      'c c c c c c c c c c c c'
-      'c c c c c c c c c c c c';
-  } */
-
-  /* Modify the grid template to remove the right sidebar column when the sidebar isn't displayed */
-
   .nav {
     grid-area: n;
   }
-
   .content {
     grid-area: c;
     /* height: calc(100vh - 50px) !important; */
@@ -87,5 +65,42 @@ body {
     }
   }
 }
-
-/* Sidebar */
+/* Right bar */
+.overview-card {
+  background-color: #fff;
+  border-radius: 20px;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
+}
+.bg-balance {
+  background-image: url('/images/bg-currency.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+  /* background-color: rgba(37, 37, 229, 0.498); */
+}
+/* Modal */
+.ReactModal__Content {
+  background-color: rgb(255, 255, 255) !important;
+  max-width: 45rem;
+  max-height: min-content;
+  margin: 0 auto;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+.ReactModal__Content--after-open {
+  transform: translateY(0) !important;
+}
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.644) !important;
+  backdrop-filter: blur(3px);
+  z-index: 33;
+}
+/* Property Page */
+.css-13cymwt-control {
+  background-color: #fafafa !important;
+  border: none !important;
+  padding: 8px;
+}

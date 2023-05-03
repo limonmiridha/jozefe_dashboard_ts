@@ -8,7 +8,6 @@ import {
   Menu,
   MenuItem,
   useProSidebar,
-  SidebarProps,
 } from 'react-pro-sidebar';
 
 const menuItemStyles = {
@@ -85,6 +84,7 @@ const DashboardSidebar = () => {
                 if (menu.type === 'menu') {
                   return (
                     <MenuItem
+                      key={i}
                       component={<Link href={menu.link} />}
                       suffix={!collapsed && menu.suffix && <Zero />}
                       onClick={() => setSelectedMenu(menu.link)}
@@ -145,8 +145,8 @@ const DashboardSidebar = () => {
                       <Menu menuItemStyles={subMenuItemStyles} className="px-4">
                         {menu.children?.map((item, i) => (
                           <MenuItem
-                            component={<Link href={item.link} />}
                             key={i}
+                            component={<Link href={item.link} />}
                             onClick={() => setSelectedMenu(item.title)}
                             className={`menuItem ${
                               selectedMenu === item.title ? 'selected' : ''

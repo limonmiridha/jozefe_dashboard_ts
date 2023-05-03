@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
           <div
             className={`right ${
-              showRightbar && 'xl:col-span-3 h-full'
+              showRightbar && 'hidden xl:block xl:col-span-3 h-full'
             } bg-white w-auto`}
           >
             {showRightbar ? (
