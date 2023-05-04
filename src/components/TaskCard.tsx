@@ -11,7 +11,7 @@ const TaskCard = ({ desc }: any) => {
       <div className="py-2 xs:p-4">
         <div className="justify-betweens text-sm gap-1 xs:gap-4">
           <div className="flex gap-1 xs:gap-3 text-xs lg:text-base">
-            <span className="flex gap-3 px-2 py-1 rounded-full text-white bg-[#808BC5]">
+            <span className="flexs gap-1 px-2 py-1 rounded-full text-white bg-[#808BC5]">
               <Image
                 src="/images/tasks/setting-2.svg"
                 width={16}

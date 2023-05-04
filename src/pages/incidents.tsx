@@ -1,7 +1,7 @@
 import React from 'react';
 import { TitleHeader } from '@/components/Headers';
 import { incidentsCards } from '@/data/CardsData';
-import { memberPendingColumn, memberPendingData } from '@/data/TableData';
+import { incidentColumn, incidentData } from '@/data/TableData';
 import GlobalDataTable from '@/components/GlobalDataTable';
 import InfoCards from '@/components/InfoCards';
 
@@ -17,8 +17,8 @@ const incidents = () => {
       </div>
       <div className="bg-white rounded-lg my-4">
         <GlobalDataTable
-          data={memberPendingData}
-          column={memberPendingColumn}
+          data={incidentData}
+          column={incidentColumn}
           tableTitle="Incidents"
           titleImg="/images/incidents/incidentsBg.svg"
           capsuleBtn

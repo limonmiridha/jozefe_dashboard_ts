@@ -64,7 +64,7 @@ const tasks = () => {
         </Button>
       </div>
       {viewChange === 'table' ? (
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 my-4">
+        <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-6 my-4">
           {/* New Tasks */}
           <div>
             <div className="justify-betweens">

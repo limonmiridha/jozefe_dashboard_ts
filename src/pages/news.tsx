@@ -14,7 +14,7 @@ const news = () => {
         pageIcon="/images/news/news.svg"
         headerText="Lorem Ipsum is a dummy text for placeholder"
       />
-      <Card cls="p-4">
+      <Card cls="px-4 pb-3">
         <InnerHeader>Create News</InnerHeader>
         <Input name="Subject" type="name" />
         <div className="h-72 mt-3">

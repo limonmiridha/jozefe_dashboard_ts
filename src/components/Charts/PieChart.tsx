@@ -37,7 +37,7 @@ const PieCharts = ({ data, value: v }: any) => {
           y={cy}
           dy={10}
           textAnchor="middle"
-          className="text-4xl font-extrabold text-black/75"
+          className="text-3xl font-bold text-black/75"
           fill={'current' || 'black'}
         >
           {v}

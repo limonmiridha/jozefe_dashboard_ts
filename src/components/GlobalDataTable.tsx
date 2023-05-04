@@ -23,6 +23,7 @@ const GlobalDataTable = ({
   tableTitle,
   titleImg,
   headerText,
+  currencyBtn,
   capsuleBtn,
   tableHeader = true,
 }: any) => {
@@ -46,8 +47,8 @@ const GlobalDataTable = ({
 
   const renderHeader = () => {
     return (
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-3 relative">
+      <div className="justify-betweens">
+        <div className="flexs gap-3 relative">
           <span className="p-input-icon-left">
             <i className="pi pi-search" />
             <InputText
@@ -71,19 +72,21 @@ const GlobalDataTable = ({
             />
           </button>
         </div>
-        <div className="absolute md:relative text-xl right-2 -top-3">
-          {headerText ? (
-            <>
-              <h3>Total Pending</h3>
-              <div className="flex gap-3 mt-3">
-                <span>0</span>
-                <CurrencyBtn />
-              </div>
-            </>
-          ) : capsuleBtn ? null : (
-            <CurrencyBtn />
-          )}
-        </div>
+        {currencyBtn && (
+          <div className="absolute md:relative text-xl right-2 -top-3">
+            {headerText ? (
+              <>
+                <h3>Total Pending</h3>
+                <div className="flex gap-3 mt-3">
+                  <span>0</span>
+                  <CurrencyBtn />
+                </div>
+              </>
+            ) : capsuleBtn ? null : (
+              <CurrencyBtn />
+            )}
+          </div>
+        )}
       </div>
     );
   };

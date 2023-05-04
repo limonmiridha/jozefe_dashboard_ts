@@ -17,5 +17,5 @@ export const TitleHeader = ({ pageIcon, headerText }: any) => {
   );
 };
 export const InnerHeader = ({ children }: any) => {
-  return <h3 className="text-lg mb-3 font-semibold">{children}</h3>;
+  return <h3 className="text-lg py-3 font-semibold">{children}</h3>;
 };

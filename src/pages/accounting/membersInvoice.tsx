@@ -5,6 +5,7 @@ import FileUploader from '@/components/FileUploader';
 import { membersColumn, membersData } from '@/data/TableData';
 import GlobalDataTable from '@/components/GlobalDataTable';
 import Input from '@/components/Input';
+import { TitleHeader } from '@/components/Headers';
 const members = [
   {
     value: 'Property Role',
@@ -26,25 +27,11 @@ const members = [
 const membersInvoice = () => {
   return (
     <>
-      <div className="flex items-center gap-5 pb-3">
-        <Image
-          src="/images/accounting/coin-money.svg"
-          width={40}
-          height={40}
-          alt="property"
-        />
-        <p className="md:text-xl font-semibold">
-          Here you can create a private bill for your tenant or members, which
-          will not be in the common bills.
-        </p>
-        <Image
-          src="/images/property/exclaim.svg"
-          width={24}
-          height={24}
-          className="-mt-5 "
-          alt="property"
-        />
-      </div>
+      <TitleHeader
+        pageIcon="/images/accounting/coin-money.svg"
+        headerText="Here you can create a private bill for your tenant or members, which
+        will not be in the common bills."
+      />
       <div className="bg-white p-4 rounded-lg">
         <div className="grid xs:grid-cols-2 md:grid-cols-3 gap-4">
           <SelectInput data={members} />

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NewsDetailModal from './Modal/NewsDetailModal';
 
-const TableActionIcon = () => {
+const TableActionIcon = ({ notMessage }: any) => {
   // Modal
   const [showModal, setShowModal] = useState(false);
 
@@ -22,9 +22,16 @@ const TableActionIcon = () => {
         <Link href="">
           <Image src="/images/news/delete.svg" width={20} height={20} alt="" />
         </Link>
-        <Link href="">
-          <Image src="/images/news/message.svg" width={20} height={20} alt="" />
-        </Link>
+        {!notMessage && (
+          <Link href="">
+            <Image
+              src="/images/news/message.svg"
+              width={20}
+              height={20}
+              alt=""
+            />
+          </Link>
+        )}
       </div>
       <NewsDetailModal isOpen={showModal} onClose={handleCloseModal} />
     </div>

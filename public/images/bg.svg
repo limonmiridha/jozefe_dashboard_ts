@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="482" viewBox="0 0 1920 482">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="1920" height="482" transform="translate(-720 21)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.93" y1="0.069" x2="0.052" y2="0.836" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d2daf1"/>
+      <stop offset="0.719" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e0e6f4"/>
+      <stop offset="1" stop-color="#eef3ff"/>
+    </linearGradient>
+  </defs>
+  <g id="bg_element" data-name="bg element" transform="translate(720 -21)" clip-path="url(#clip-path)">
+    <g id="Bg_Design" data-name="Bg Design" transform="translate(-745.333 39)">
+      <path id="Shape" d="M0,700.189C178.188,365.338,625.669,406.82,860.127,387.328,1191.669,359.766,1351.149,29.987,1945.333,0V1127H0Z" transform="translate(0)" fill="#e3e9f7" opacity="0.3"/>
+      <path id="Shape-2" data-name="Shape" d="M0,607C286.709,398,440.839,462.449,860.127,376,1284.776,288.446,1468.87,29.982,1945.333,0V840H0Z" transform="translate(0 236)" opacity="0.3" fill="url(#linear-gradient)"/>
+      <path id="Shape-3" data-name="Shape" d="M0,669C334.3,404.2,444.165,510.119,856.844,423.683,1274.8,336.143,1445.714,29.978,1914.667,0V669Z" transform="translate(30.667 407)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

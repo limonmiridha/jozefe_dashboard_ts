@@ -49,7 +49,7 @@ const subMenuItemStyles = {
 
 const DashboardSidebar = () => {
   const [selectedMenu, setSelectedMenu] = useState<string>('dashboard');
-  const { collapseSidebar, collapsed } = useProSidebar();
+  const { collapseSidebar, collapsed, broken } = useProSidebar();
   return (
     <div className="sidebar relative h-screen overflow-y-auto">
       <Sidebar>
@@ -181,7 +181,7 @@ const DashboardSidebar = () => {
           <div className="px-1 py-4 mb-16">{!collapsed && <SidebarCard />}</div>
           <Menu
             className={`${
-              collapsed ? 'w-[70px]' : 'w-[270px] px-3'
+              collapsed ? 'w-[70px]' : 'w-[260px] px-3'
             } bg-white fixed left-1 bottom-0`}
             menuItemStyles={menuItemStyles}
           >
@@ -289,42 +289,42 @@ const sidebarMenu = [
       },
       {
         id: '3f',
-        link: '/interfaces/property',
+        link: '/accounting/suppliers',
         icon: '/images/sidebar/suppliers.svg',
         hoverIcon: '/images/sidebar/suppliers-H.svg',
         title: 'Suppliers',
       },
       {
         id: '3g',
-        link: '/interfaces/property',
+        link: '/accounting/contract',
         icon: '/images/sidebar/contact.svg',
         hoverIcon: '/images/sidebar/contact-H.svg',
         title: 'Contracts',
       },
       {
         id: '3h',
-        link: '/interfaces/property',
+        link: '/accounting/cashflow',
         icon: '/images/sidebar/cashflow.svg',
         hoverIcon: '/images/sidebar/cashflow-H.svg',
         title: 'Tresory Cashflow',
       },
       {
         id: '3i',
-        link: '/interfaces/property',
+        link: '/accounting/property',
         icon: '/images/sidebar/fund.svg',
         hoverIcon: '/images/sidebar/fund-H.svg',
         title: 'Fundraising',
       },
       {
         id: '3j',
-        link: '/interfaces/property',
+        link: '/accounting/property',
         icon: '/images/sidebar/debit.svg',
         hoverIcon: '/images/sidebar/debit-H.svg',
         title: 'Debit',
       },
       {
         id: '3k',
-        link: '/interfaces/property',
+        link: '/accounting/property',
         icon: '/images/sidebar/credit.svg',
         hoverIcon: '/images/sidebar/credit-H.svg',
         title: 'Credit',

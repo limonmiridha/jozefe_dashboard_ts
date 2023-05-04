@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 
 const CustomButton = ({ label, className, onClick }: any) => {
   return <Button label={label} className={className} onClick={onClick} />;
@@ -72,6 +73,7 @@ function renderStatus(status: any) {
   );
 }
 
+// Property Page data Table
 export const memberCreditColumn = [
   {
     field: 'id',
@@ -337,7 +339,7 @@ export const memberPendingData = [
     memberID: '0012',
   },
 ];
-
+// Members Page Data
 export const membersColumn = [
   {
     field: 'id',
@@ -432,70 +434,7 @@ export const membersData = [
     quota: '32%',
   },
 ];
-
-export const membersPaymentColumn = [
-  {
-    field: 'id',
-    header: '#',
-    sort: true,
-  },
-  {
-    // header: 'image',
-    body: ImageBodyTemplate,
-  },
-  {
-    field: 'name',
-    header: 'Member',
-    sort: true,
-  },
-  {
-    field: 'total',
-    header: 'Total',
-    sort: true,
-  },
-  {
-    field: 'paid',
-    header: 'Paid',
-    sort: true,
-  },
-  {
-    field: 'pending',
-    header: 'Pending',
-    sort: true,
-  },
-  {
-    field: 'payNow',
-    header: 'Pay Now',
-    body: renderInputButton,
-    sort: true,
-  },
-
-  {
-    body: <Button label="Send Remainder" className="reminder" />,
-  },
-  {
-    body: <Button label="View Member Profile" className="edit" />,
-  },
-];
-
-export const membersPaymentData = [
-  {
-    id: 1,
-    image: '/images/table/proImg1.svg',
-    name: 'Harper Stevens',
-    total: 0,
-    paid: 0,
-    pending: 0,
-  },
-  {
-    id: 2,
-    image: '/images/table/proImg1.svg',
-    name: 'Harper Stevens',
-    total: 0,
-    paid: 0,
-    pending: 0,
-  },
-];
+// Accounting
 export const rentalColumn = [
   {
     field: 'id',
@@ -608,6 +547,296 @@ export const rentalData = [
     m2: renderIcon('/images/rental/redCheck.svg'),
   },
 ];
+export const membersPaymentColumn = [
+  {
+    field: 'id',
+    header: '#',
+    sort: true,
+  },
+  {
+    // header: 'image',
+    body: ImageBodyTemplate,
+  },
+  {
+    field: 'name',
+    header: 'Member',
+    sort: true,
+  },
+  {
+    field: 'total',
+    header: 'Total',
+    sort: true,
+  },
+  {
+    field: 'paid',
+    header: 'Paid',
+    sort: true,
+  },
+  {
+    field: 'pending',
+    header: 'Pending',
+    sort: true,
+  },
+  {
+    field: 'payNow',
+    header: 'Pay Now',
+    body: renderInputButton,
+    sort: true,
+  },
+
+  {
+    body: <Button label="Send Remainder" className="reminder" />,
+  },
+  {
+    body: <Button label="View Member Profile" className="edit" />,
+  },
+];
+
+export const membersPaymentData = [
+  {
+    id: 1,
+    image: '/images/table/proImg1.svg',
+    name: 'Harper Stevens',
+    total: 0,
+    paid: 0,
+    pending: 0,
+  },
+  {
+    id: 2,
+    image: '/images/table/proImg1.svg',
+    name: 'Harper Stevens',
+    total: 0,
+    paid: 0,
+    pending: 0,
+  },
+];
+export const suppliersColumn = [
+  {
+    field: 'id',
+    header: '#',
+    sort: true,
+  },
+  {
+    field: 'room',
+    header: 'Type',
+    sort: true,
+  },
+  {
+    field: 'name',
+    header: 'Company Name',
+    sort: true,
+  },
+  {
+    field: 'phone',
+    header: 'Phone',
+    sort: true,
+  },
+  {
+    field: 'accountNo',
+    header: 'Bank Account',
+    sort: true,
+  },
+  {
+    field: 'description',
+    header: 'Address',
+    sort: true,
+  },
+  {
+    field: 'payment',
+    // header: '',
+  },
+  {
+    field: 'contracts',
+    // header: '',
+  },
+  {
+    field: 'actionIcon',
+  },
+];
+
+export const suppliersData = [
+  {
+    id: 1,
+    name: 'Harper Stevens',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+  {
+    id: 2,
+    name: 'Ethan Smith',
+    room: 'Room 09',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+  {
+    id: 3,
+    name: 'Ava Martinez',
+    room: 'Studio 11',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+  {
+    id: 4,
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+  {
+    id: 5,
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+  {
+    id: 6,
+    name: 'Ghostbusters',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    phone: '+1 123 1234567',
+    accountNo: '009521234567',
+    payment: <Button label="Payment" />,
+    contracts: <Button label="Contracts" className="blue" />,
+    actionIcon: <TableActionIcon notMessage />,
+  },
+];
+// Incident
+export const incidentColumn = [
+  {
+    selectionMode: 'multiple',
+  },
+
+  {
+    // header: 'image',
+    body: ImageBodyTemplate,
+  },
+  {
+    field: 'name',
+    header: 'Members Name',
+    sort: true,
+  },
+  {
+    field: 'room',
+    header: 'Type',
+    sort: true,
+  },
+  {
+    field: 'date',
+    header: 'Date',
+    sort: true,
+  },
+  {
+    field: 'priority',
+    header: 'Priority',
+    sort: true,
+  },
+  {
+    field: 'description',
+    header: 'Description',
+    sort: true,
+  },
+  {
+    field: 'status',
+    header: 'Status',
+    sort: true,
+  },
+  {
+    header: '',
+    field: 'details',
+  },
+];
+
+export const incidentData = [
+  {
+    id: 1,
+    image: '/images/table/proImg1.svg',
+    name: 'Harper Stevens',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 2,
+    image: '/images/table/proImg1.svg',
+    name: 'Ethan Smith',
+    room: 'Room 09',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 3,
+    image: '/images/table/proImg1.svg',
+    name: 'Ava Martinez',
+    room: 'Studio 11',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 4,
+    image: '/images/table/proImg1.svg',
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 5,
+    image: '/images/table/proImg1.svg',
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 6,
+    image: '/images/table/proImg1.svg',
+    name: 'Ghostbusters',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+];
+// News page
 export const newsColumn = [
   {
     field: 'id',

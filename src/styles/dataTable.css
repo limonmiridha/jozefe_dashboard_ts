@@ -20,6 +20,9 @@
   /* padding: 0.5rem !important; */
   max-width: 1rem !important;
 }
+/* .p-datatable .p-datatable-tbody > tr > td {
+  padding: 1rem 0.5rem !important;
+} */
 .p-button {
   border: none !important;
   font-size: 14px !important;
@@ -32,22 +35,22 @@
 .viewBtn.p-button:hover {
   background-color: #00ab8c !important;
 }
-.edit.p-button {
+.blue.p-button {
   background-color: #017efa !important;
 }
-.edit.p-button:hover {
+.blue.p-button:hover {
   background-color: #0371df !important;
 }
-.delete.p-button {
+.pinkRed.p-button {
   background-color: #fd717a !important;
 }
-.delete.p-button:hover {
+.pinkRed.p-button:hover {
   background-color: #f9616b !important;
 }
-.reminder.p-button {
+.cyan.p-button {
   background-color: #51cbff !important;
 }
-.reminder.p-button:hover {
+.cyan.p-button:hover {
   background-color: #1fb4f4 !important;
 }
 /* .css-jn69v9 .css-honxw6 {
