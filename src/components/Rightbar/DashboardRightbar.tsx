@@ -5,6 +5,8 @@ import Image from 'next/image';
 import CurrencyBtn from '../CurrencyBtn';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import Calendar from '../Calendar';
+import CircularProgressBar from './CircularProgressBar';
+import { BsThreeDots } from 'react-icons/bs';
 
 const DashboardRightbar = () => {
   return (
@@ -28,6 +30,132 @@ const DashboardRightbar = () => {
       </Card>
       <InnerHeader>Calendar</InnerHeader>
       <Calendar />
+      <div className="p-3 mt-4 bg-white rounded-xl box-shadow">
+        <div className="">
+          <CurrencyBtn />
+        </div>
+        <div className="flex items-center gap-3 -mt-3">
+          <Image
+            src="/images/dashboradRightbar/network.svg"
+            width={50}
+            height={50}
+            alt=""
+          />
+
+          <div>
+            <p className=" text-[14px] text-[#82858E]">Total Rent Income</p>
+            <div className="flex items-center gap-2">
+              <h2 className=" text-2xl font-bold text-[#000]">200,000</h2>
+              <Image
+                src="/images/dashboradRightbar/growChart.svg"
+                width={14}
+                height={14}
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Total Cash Flow */}
+      <InnerHeader>Total Cash Flow</InnerHeader>
+      <div className="p-3 bg-white rounded-lg box-shadow">
+        <CurrencyBtn />
+
+        <div className="justify-centers gap-4 p-3 relative">
+          <div className="w-24">
+            {/* progress bar circle */}
+            <CircularProgressBar
+              pathColor="#0DDFA4"
+              trailColor="#E5FEF4"
+              textColor="#0DDFA4"
+            />
+
+            <div className="mt-3 text-center text-sm md:text-base">
+              <h3>Cash In</h3>
+              <h3>20,000</h3>
+            </div>
+          </div>
+
+          <h2 className="-translate-y-1/2">VS</h2>
+
+          <div className="w-24">
+            {/* progress bar circle */}
+            <CircularProgressBar
+              pathColor="#FD717A"
+              trailColor="#FEE5E5"
+              textColor="#FD717A"
+            />
+
+            <div className="mt-3 text-center text-sm md:text-base">
+              <h3>Cash Out</h3>
+              <h3>20,000</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Current Balance */}
+      <div className="p-5 bg-white rounded-xl box-shadow mt-4">
+        <div className="bg-balance rounded-xl drop-shadow-lg p-3 my-3 bg-gradient-to-r from-[#4764FF] to-[#747db3] py-[10px] px-[15px] ">
+          <div className="absolute inset-0 rounded-xl bg-blue-600 opacity-80 z-10"></div>
+          <div className="flex items-center justify-between relative z-20">
+            <p className="text-sm text-white">Current Balance</p>
+            <div className="flex items-center justify-between gap-2">
+              <CurrencyBtn activeBg="bg-white" />
+              <BsThreeDots className="text-white cursor-pointer" />
+            </div>
+          </div>
+          <div className="flex items-center justify-between relative z-20">
+            <h3 className="text-lg font-bold text-white">200,000</h3>
+            <Image
+              src="/images/dashboradRightbar/wave.svg"
+              width={70}
+              height={70}
+              className="pb-2 mt-3"
+              alt="wave"
+            />
+          </div>
+        </div>
+        <p className=" text-[#82858E] mt-4 text-[16px] font-semibold">
+          Latest Transactions
+        </p>
+        <Transactions
+          icon="/images/dashboradRightbar/members.svg"
+          title1="Members Payment"
+          title2="Today, 19:21 John Doe"
+          title3="+154.50"
+          title4="in"
+          color="text-[#0DDFA4]"
+        />
+        <Transactions
+          icon="/images/dashboradRightbar/property.svg"
+          title1="Property Payment"
+          title2="23, Jun, 13:06"
+          title3="+454.50"
+          title4="out"
+          color="text-[#FF5762]"
+        />
+        <Transactions
+          icon="/images/dashboradRightbar/suppliers.svg"
+          title1="Suppliers Payment"
+          title2="03, July, 3:06"
+          title3="+154.50"
+          title4="out"
+          color="text-[#FF5762]"
+        />
+        <Transactions
+          icon="/images/dashboradRightbar/others.svg"
+          title1="Other Payment"
+          title2="03, July, 3:06"
+          title3="+154.50"
+          title4="out"
+          color="text-[#FF5762]"
+        />
+
+        <div className="flex items-center justify-center gap-2 text-[16px] text-blue-400">
+          <a href="/">See all Trasactions</a>
+          <AiOutlineArrowRight />
+        </div>
+      </div>
     </div>
   );
 };

@@ -87,6 +87,11 @@ abbr[title] {
   border-radius: 10px;
 }
 
+.react-calendar__tile--hover,
+.react-calendar__tile--hoverStart {
+  background-color: transparent !important;
+}
+
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #b0bbd5;
 }
