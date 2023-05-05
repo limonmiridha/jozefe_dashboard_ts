@@ -1,7 +1,16 @@
-import React from 'react';
+import { TitleHeader } from "@/components/Headers";
+import { Fragment } from "react";
+type Props = {};
 
-const messages = () => {
-  return <div>messages</div>;
+const meetings = (props: Props) => {
+  return (
+    <Fragment>
+      <TitleHeader
+        pageIcon="/images/messages/message_ic.svg"
+        headerText="Lorem Ipsum is a dummy text for placeholder"
+      />
+    </Fragment>
+  );
 };
 
-export default messages;
+export default meetings;
