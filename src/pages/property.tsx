@@ -151,7 +151,7 @@ const property = () => {
             <div className="grid grid-cols-2 xs:grid-cols-4 gap-4 mt-16 mb-8">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((x) => (
                 <Image
-                  src={`/images/property/img${x}.svg`}
+                  src={`/images/property/upload/img${x}.svg`}
                   width={200}
                   height={200}
                   className="w-full"

@@ -20,7 +20,7 @@ const tasks = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-5 w-5/6 pb-3 border-b">
+      <div className="justify-betweens gap-5 pb-3 border-b">
         <div className="flex gap-3">
           <div
             className={`${
@@ -64,7 +64,7 @@ const tasks = () => {
         </Button>
       </div>
       {viewChange === 'table' ? (
-        <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-6 my-4">
+        <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-6 my-4 pb-12">
           {/* New Tasks */}
           <div>
             <div className="justify-betweens">

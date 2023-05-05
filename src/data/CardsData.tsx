@@ -151,6 +151,6 @@ export const incidentsCards = [
     center: true,
     titleImg: '/images/incidents/circlePlus.svg',
     value1: 'Create Incident',
-    link: '/incidents',
+    link: '/incidents/new-incidents',
   },
 ];

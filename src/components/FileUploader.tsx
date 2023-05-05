@@ -4,6 +4,7 @@ import Button from './Button';
 type FileUploader = {
   text?: string;
   image?: string;
+  onlyUploader?: any;
 };
 const FileUploader = ({ text, image }: FileUploader) => {
   const [files, setFiles] = useState([]);
@@ -122,19 +123,21 @@ const FileUploader = ({ text, image }: FileUploader) => {
               <div className="w-16 h-[1px] bg-gray-300 " />
             </div>
             <div onClick={handleBrowse}>
-              <Button
-                text="Browse"
-                cls=" bg-[#017efb] py-[8px] px-[10px] w-[144px] h-[46] border-none text-white"
-              />
+              <Button cls=" bg-[#017efb] py-[8px] px-[10px] w-[144px] h-[46] border-none text-white">
+                Browse
+              </Button>
             </div>
           </div>
-          <p className="py-8 ">Property Documents</p>
-          <Documents files={files && files} />
 
-          <Button
-            text="Show all documents"
-            cls=" bg-[#017efb] py-2 px-4 mt-3 text-sm border-none text-white"
-          />
+          <div>
+            <p className="py-8 ">Property Documents</p>
+            <Documents files={files && files} />
+
+            <Button cls=" bg-[#017efb] py-2 px-4 mt-3 text-sm border-none text-white">
+              Show all documents
+            </Button>
+          </div>
+
           {/* <ul>
             {files.map((file) => (
               <>
