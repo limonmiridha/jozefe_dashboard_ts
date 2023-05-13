@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { BsBellFill, BsFillQuestionCircleFill } from "react-icons/bs";
-import SidebarDrawer from "@/components/Drawer/SidebarDrawer";
-import RighbarDrawer from "@/components/Drawer/RighbarDrawer";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
-import SelectElement from "@/components/SelectElement";
+import React, { useState, useEffect, useRef } from 'react';
+import { BsBellFill, BsFillQuestionCircleFill } from 'react-icons/bs';
+import SidebarDrawer from '@/components/Drawer/SidebarDrawer';
+import RighbarDrawer from '@/components/Drawer/RighbarDrawer';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import SelectElement from '@/components/SelectElement';
 
 const avatars = [0, 1, 2, 3, 4, 5, 6];
 
@@ -33,11 +33,11 @@ const Navbar = () => {
         setIsSetDropdownOpen(false);
       }
     };
-    document.addEventListener("click", handleClickOutside);
-    document.addEventListener("click", handleClickOutside2);
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside2);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("click", handleClickOutside2);
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside2);
     };
   }, [dropdownRef, dropdownRef2]);
   const handleDropdownClick = (e: any) => {
@@ -53,79 +53,79 @@ const Navbar = () => {
     setShowDropdown(false);
   };
   // Navbar Main Header for each page
-  let title = "";
-  let subTitle = "";
-  let miniDesc = "";
+  let title = '';
+  let subTitle = '';
+  let miniDesc = '';
   switch (router.pathname) {
-    case "/dashboard":
-      title = "Dashboard";
+    case '/dashboard':
+      title = 'Dashboard';
       subTitle =
-        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+        'Welcome back Józef 👋, Let’s get back to managing your properties.';
       break;
-    case "/incidents":
-      title = "Incident";
+    case '/incidents':
+      title = 'Incident';
       subTitle =
-        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+        'Welcome back Józef 👋, Let’s get back to managing your properties.';
       break;
-    case "/property":
-      title = "Property";
-      subTitle = "Let’s get back to managing your property.";
-      miniDesc = "Information - Documents - Financials";
+    case '/property':
+      title = 'Property';
+      subTitle = 'Let’s get back to managing your property.';
+      miniDesc = 'Information - Documents - Financials';
       break;
-    case "/accounting/rentalDashboard":
-      title = "Rental Dashboard";
-      subTitle = "Let’s get back to managing your rentals.";
+    case '/accounting/rentalDashboard':
+      title = 'Rental Dashboard';
+      subTitle = 'Let’s get back to managing your rentals.';
       break;
-    case "/members":
-      title = "Members";
-      subTitle = "Let’s get back to managing your members.";
-      miniDesc = "Information - Documents - Financials";
+    case '/members':
+      title = 'Members';
+      subTitle = 'Let’s get back to managing your members.';
+      miniDesc = 'Information - Documents - Financials';
       break;
-    case "/memberProfile":
-      title = "Member Profile";
-      subTitle = "Let’s get back to managing your members.";
+    case '/memberProfile':
+      title = 'Member Profile';
+      subTitle = 'Let’s get back to managing your members.';
       break;
-    case "/accounting/membersPayment":
-      title = "Member Payment";
-      subTitle = "Let’s get back to managing your members payment.";
-      miniDesc = "Accounting";
+    case '/accounting/membersPayment':
+      title = 'Member Payment';
+      subTitle = 'Let’s get back to managing your members payment.';
+      miniDesc = 'Accounting';
       break;
-    case "/accounting/membersInvoice":
-      title = "Members Invoice";
-      subTitle = "Let’s get back to invoicing your members.";
-      miniDesc = "Private Accounting";
+    case '/accounting/membersInvoice':
+      title = 'Members Invoice';
+      subTitle = 'Let’s get back to invoicing your members.';
+      miniDesc = 'Private Accounting';
       break;
-    case "/accounting/pInvoice":
-      title = "Invoice Creation";
-      subTitle = "Let’s get back to invoicing your members.";
-      miniDesc = "Accounting - Common Property Charge";
+    case '/accounting/pInvoice':
+      title = 'Invoice Creation';
+      subTitle = 'Let’s get back to invoicing your members.';
+      miniDesc = 'Accounting - Common Property Charge';
       break;
-    case "/tasks":
-      title = "Tasks & Maintenance";
-      subTitle = "View upcoming tasks and maintenance";
+    case '/tasks':
+      title = 'Tasks & Maintenance';
+      subTitle = 'View upcoming tasks and maintenance';
       break;
-    case "/news":
-      title = "News";
+    case '/news':
+      title = 'News';
       subTitle =
-        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+        'Welcome back Józef 👋, Let’s get back to managing your properties.';
       break;
-    case "/messages":
-      title = "Messages";
+    case '/messages':
+      title = 'Messages';
       subTitle =
-        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+        'Welcome back Józef 👋, Let’s get back to managing your properties.';
       break;
 
     default:
-      title = "Dashboard";
+      title = 'Dashboard';
       subTitle =
-        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+        'Welcome back Józef 👋, Let’s get back to managing your properties.';
       break;
   }
   return (
     <>
       <SidebarDrawer />
 
-      <div className="items-center justify-between gap-3 py-2 pl-8 pr-8 bg-white md:flex md:pl-4">
+      <div className="justify-betweens gap-3 py-2 pl-8 pr-8 bg-white md:flex md:pl-4">
         {/* Navbar header Text */}
         <div>
           <h2 className="text-2xl font-bold">
@@ -136,7 +136,7 @@ const Navbar = () => {
           </h2>
           <p className="text-sm text-slate-400">{subTitle}</p>
         </div>
-        <div className="justify-center gap-6 mt-3 text-xl flexs md:mt-0">
+        <div className="justify-centers gap-6 mt-3 text-xl md:mt-0">
           {/* Notification with dropdown */}
           <div className="relative" ref={dropdownRef}>
             <Link href="" onClick={handleDropdownClick}>
@@ -174,7 +174,7 @@ const Navbar = () => {
                 src="/images/navbar/setting.svg"
                 width={24}
                 height={24}
-                style={{ minWidth: "20px" }}
+                style={{ minWidth: '20px' }}
                 alt="setting Icon"
               />
             </Link>
@@ -199,7 +199,7 @@ const Navbar = () => {
                     </Link>
                     <p
                       className={`${
-                        item.type && "bg-blue-500"
+                        item.type && 'bg-blue-500'
                       } text-sm  text-white rounded ml-auto px-2 py-1`}
                     >
                       {item.type && item.type}
@@ -210,7 +210,7 @@ const Navbar = () => {
             )}
           </div>
           {/* Help Section */}
-          <Link href="" className="flex items-center gap-2">
+          <Link href="" className="flexs gap-2">
             <BsFillQuestionCircleFill className="text-gray-400" />
             <p className="text-base text-slate-500">Help</p>
           </Link>
@@ -221,7 +221,7 @@ const Navbar = () => {
                 src={`/images/navbar/avatar/avatar-${selectedAvatar}.svg`}
                 width={36}
                 height={36}
-                style={{ minWidth: "28px" }}
+                style={{ minWidth: '28px' }}
                 onClick={() => setShowDropdown(!showDropdown)}
                 alt="avatar"
               />
@@ -247,45 +247,45 @@ export default Navbar;
 const dropdown = [
   {
     id: 1,
-    image: "/images/incidents.svg",
-    title: "1 New Incident",
+    image: '/images/navbar/dropdown/incidents.svg',
+    title: '1 New Incident',
   },
   {
-    id: 1,
-    image: "/images/chat.svg",
-    title: "1 New Message",
+    id: 2,
+    image: '/images/navbar/dropdown/chat.svg',
+    title: '1 New Message',
   },
   {
-    id: 1,
-    image: "/images/task.svg",
-    title: "1 New Task Pending",
+    id: 3,
+    image: '/images/navbar/dropdown/task.svg',
+    title: '1 New Task Pending',
   },
 ];
 const settingDropdown = [
   {
     id: 1,
-    image: "/images/plan.svg",
-    title: "My Account Plan",
-    type: "FREE",
+    image: '/images/navbar/dropdown/plan.svg',
+    title: 'My Account Plan',
+    type: 'FREE',
   },
   {
-    id: 1,
-    image: "/images/access.svg",
-    title: "Control Access",
+    id: 2,
+    image: '/images/navbar/dropdown/access.svg',
+    title: 'Control Access',
   },
   {
-    id: 1,
-    image: "/images/changePass.svg",
-    title: "Change Password",
+    id: 3,
+    image: '/images/navbar/dropdown/changePass.svg',
+    title: 'Change Password',
   },
   {
-    id: 1,
-    image: "/images/premium.svg",
-    title: "Go Premium",
+    id: 4,
+    image: '/images/navbar/dropdown/premium.svg',
+    title: 'Go Premium',
   },
   {
-    id: 1,
-    image: "/images/customer-care.svg",
-    title: "Contact Support",
+    id: 5,
+    image: '/images/navbar/dropdown/customer-care.svg',
+    title: 'Contact Support',
   },
 ];

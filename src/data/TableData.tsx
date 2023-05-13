@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import TableActionIcon from '@/components/TableActionIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { Popover } from 'react-tiny-popover';
+import ThreeDotsDetails from '@/components/ThreeDotsDetails';
 
 const CustomButton = ({ label, className, onClick }: any) => {
   return <Button label={label} className={className} onClick={onClick} />;
@@ -355,11 +358,11 @@ export const membersColumn = [
     header: 'Name',
     sort: true,
   },
-  {
-    field: 'id',
-    header: 'ID',
-    sort: true,
-  },
+  // {
+  //   field: 'id',
+  //   header: 'ID',
+  //   sort: true,
+  // },
   {
     field: 'taxNumber',
     header: 'Tax Number',
@@ -778,7 +781,7 @@ export const incidentData = [
     date: '11 Apr 2023 - 13 Apr 2023',
     priority: 'High',
     status: renderStatus('active'),
-    details: <BsThreeDotsVertical />,
+    // details: ThreeDotsDetails(),
   },
   {
     id: 2,

@@ -133,14 +133,6 @@ const property = () => {
           <div>
             <h2 className="mb-4 text-lg font-semibold">Documents</h2>
             <FileUploader text="Drag or drop documents here to upload" />
-            {/* <p className="py-8 ">Property Documents</p>
-        <Documents />
-        <Documents />
-        <Documents />
-        <GlobalButton
-          text="Show all documents"
-          cls=" bg-[#017efb] py-2 px-4 mt-3 text-sm border-none text-white"
-        /> */}
           </div>
           <div>
             <h2 className="mb-4 text-lg font-semibold">Property Images</h2>
