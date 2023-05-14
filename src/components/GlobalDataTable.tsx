@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { HiChevronRight } from 'react-icons/hi';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { InputText } from 'primereact/inputtext';
+import React, { useState } from "react";
+import { HiChevronRight } from "react-icons/hi";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { InputText } from "primereact/inputtext";
 // import initFilters from 'primereact/api';
 
 //theme
-import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import "primereact/resources/themes/lara-light-indigo/theme.css";
 
 //core
-import 'primereact/resources/primereact.min.css';
+import "primereact/resources/primereact.min.css";
 
 //icons
-import 'primeicons/primeicons.css';
-import Image from 'next/image';
-import CurrencyBtn from './CurrencyBtn';
-import CapsuleBtn from './CapsuleBtn';
+import "primeicons/primeicons.css";
+import Image from "next/image";
+import CurrencyBtn from "./CurrencyBtn";
+import CapsuleBtn from "./CapsuleBtn";
 
 const GlobalDataTable = ({
   data,
@@ -30,7 +30,7 @@ const GlobalDataTable = ({
   const [selectedProducts, setSelectedProducts] = useState(null);
   const [rowClick, setRowClick] = useState(true);
   const [filters, setFilters] = useState({});
-  const [globalFilterValue, setGlobalFilterValue] = useState('');
+  const [globalFilterValue, setGlobalFilterValue] = useState("");
 
   // const clearFilter = (): void => {
   //   initFilters();
@@ -39,7 +39,7 @@ const GlobalDataTable = ({
     const value = e.target.value;
     let _filters: any = { ...filters };
 
-    _filters['global'].value = value;
+    _filters["global"].value = value;
 
     setFilters(_filters);
     setGlobalFilterValue(value);
@@ -48,7 +48,7 @@ const GlobalDataTable = ({
   const renderHeader = () => {
     return (
       <div className="justify-betweens">
-        <div className="flexs gap-3 relative">
+        <div className="relative gap-3 flexs">
           <span className="p-input-icon-left">
             <i className="pi pi-search" />
             <InputText
@@ -67,13 +67,13 @@ const GlobalDataTable = ({
               src="/images/filter.svg"
               width={42}
               height={42}
-              className="bg-blue-500 p-3 rounded-md"
+              className="p-3 bg-blue-500 rounded-md"
               alt="filter"
             />
           </button>
         </div>
         {currencyBtn && (
-          <div className="absolute md:relative text-xl right-2 -top-3">
+          <div className="absolute text-xl md:relative right-2 -top-3">
             {headerText ? (
               <>
                 <h3>Total Pending</h3>
@@ -94,10 +94,10 @@ const GlobalDataTable = ({
   const header = renderHeader();
 
   return (
-    <div className="bg-white py-4 mb-16 box-shadow relative">
+    <div className="relative py-4 mb-16 bg-white box-shadow">
       {tableHeader && (
-        <div className="justify-betweens p-4 border-b">
-          <div className="flexs gap-4">
+        <div className="p-4 border-b justify-betweens">
+          <div className="gap-4 flexs">
             <Image
               src={titleImg}
               width={32}
@@ -131,7 +131,7 @@ const GlobalDataTable = ({
         // ]}
         header={header}
         emptyMessage="No customers found."
-        tableStyle={{ minWidth: '50rem' }}
+        tableStyle={{ minWidth: "50rem" }}
       >
         {column.map((item: any, i: any) => (
           <Column
@@ -144,7 +144,7 @@ const GlobalDataTable = ({
           ></Column>
         ))}
       </DataTable>
-      <button className="absolute bottom-8 flex items-center gap-3 pl-4 hover:text-blue-600">
+      <button className="absolute flex items-center gap-3 pl-4 bottom-8 hover:text-blue-600">
         See All Enteries <HiChevronRight />
       </button>
     </div>

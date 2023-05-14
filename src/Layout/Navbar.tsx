@@ -115,6 +115,12 @@ const Navbar = () => {
         "Welcome back Józef 👋, Let’s get back to managing your properties.";
       break;
 
+    case "/messages/new-messages":
+      title = " New Messages";
+      subTitle =
+        "Welcome back Józef 👋, Let’s get back to managing your properties.";
+      break;
+
     default:
       title = "Dashboard";
       subTitle =
