@@ -254,7 +254,7 @@ const sidebarMenu = [
     children: [
       {
         id: '3a',
-        link: '/interfaces/property',
+        link: '/accounting/generalAccounting',
         icon: '/images/sidebar/GAcounting.svg',
         hoverIcon: '/images/sidebar/GAcounting-H.svg',
         title: 'General Accounting',
@@ -296,7 +296,7 @@ const sidebarMenu = [
       },
       {
         id: '3g',
-        link: '/accounting/contract',
+        link: '/accounting/contracts',
         icon: '/images/sidebar/contact.svg',
         hoverIcon: '/images/sidebar/contact-H.svg',
         title: 'Contracts',
@@ -310,21 +310,21 @@ const sidebarMenu = [
       },
       {
         id: '3i',
-        link: '/accounting/property',
+        link: '/accounting/fundraising',
         icon: '/images/sidebar/fund.svg',
         hoverIcon: '/images/sidebar/fund-H.svg',
         title: 'Fundraising',
       },
       {
         id: '3j',
-        link: '/accounting/property',
+        link: '/accounting/debit',
         icon: '/images/sidebar/debit.svg',
         hoverIcon: '/images/sidebar/debit-H.svg',
         title: 'Debit',
       },
       {
         id: '3k',
-        link: '/accounting/property',
+        link: '/accounting/credit',
         icon: '/images/sidebar/credit.svg',
         hoverIcon: '/images/sidebar/credit-H.svg',
         title: 'Credit',

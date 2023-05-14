@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 import TableActionIcon from "@/components/TableActionIcon";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { BsThreeDotsVertical } from "react-icons/bs";
+=======
+import React, { useState } from 'react';
+import TableActionIcon from '@/components/TableActionIcon';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+import { BsThreeDotsVertical } from 'react-icons/bs';
+import { Popover } from 'react-tiny-popover';
+import ThreeDotsDetails from '@/components/ThreeDotsDetails';
+>>>>>>> bdb024f99b3090601ab2ef1c8bb0359e202665e7
 
 const CustomButton = ({ label, className, onClick }: any) => {
   return <Button label={label} className={className} onClick={onClick} />;
@@ -355,11 +367,19 @@ export const membersColumn = [
     header: "Name",
     sort: true,
   },
+<<<<<<< HEAD
   {
     field: "id",
     header: "ID",
     sort: true,
   },
+=======
+  // {
+  //   field: 'id',
+  //   header: 'ID',
+  //   sort: true,
+  // },
+>>>>>>> bdb024f99b3090601ab2ef1c8bb0359e202665e7
   {
     field: "taxNumber",
     header: "Tax Number",

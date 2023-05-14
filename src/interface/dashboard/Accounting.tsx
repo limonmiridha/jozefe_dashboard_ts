@@ -32,7 +32,12 @@ const Accounting = () => {
   return (
     <div className="bg-white shadow-md  my-4 rounded-lg">
       <div className="flex items-center p-4 gap-4 border-b">
-        <Image src="/images/accounting.svg" width={34} height={34} />
+        <Image
+          src="/images/accounting.svg"
+          width={34}
+          height={34}
+          alt="accounting"
+        />
         <h2 className="text-slate-500 font-semibold">Accounting</h2>
       </div>
       <div className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -48,7 +53,12 @@ const Accounting = () => {
               <div className="flex items-center gap-2">
                 <CurrencyBtn />
                 {item.isPlus && (
-                  <Image src={item.isPlus} width={32} height={32} />
+                  <Image
+                    src={item.isPlus}
+                    width={32}
+                    height={32}
+                    alt="plus-icon"
+                  />
                 )}
               </div>
             </div>
