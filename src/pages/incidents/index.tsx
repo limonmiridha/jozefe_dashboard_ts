@@ -1,9 +1,9 @@
-import React from 'react';
-import { TitleHeader } from '@/components/Headers';
-import { incidentsCards } from '@/data/CardsData';
-import { incidentColumn, incidentData } from '@/data/TableData';
-import GlobalDataTable from '@/components/GlobalDataTable';
-import InfoCards from '@/components/InfoCards';
+import React from "react";
+import { TitleHeader } from "@/components/Headers";
+import { incidentsCards } from "@/data/CardsData";
+import { incidentColumn, incidentData } from "@/data/TableData";
+import GlobalDataTable from "@/components/GlobalDataTable";
+import InfoCards from "@/components/InfoCards";
 
 const incidents = () => {
   return (
@@ -15,7 +15,7 @@ const incidents = () => {
       <div className="mb-6">
         <InfoCards cards={incidentsCards} />
       </div>
-      <div className="bg-white rounded-lg my-4">
+      <div className="my-4 bg-white rounded-lg">
         <GlobalDataTable
           data={incidentData}
           column={incidentColumn}

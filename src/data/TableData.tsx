@@ -37,7 +37,7 @@ const renderViewButton = () => {
 };
 
 const actionTemplate = () => (
-  <div className="flexs gap-2">
+  <div className="gap-2 flexs">
     <Link href="/memberProfile">
       <CustomButton label="View" className="blue" />
     </Link>
@@ -48,7 +48,7 @@ const actionTemplate = () => (
 const renderInputButton = () => {
   return (
     <div className="flex gap-2">
-      <InputText placeholder="Enter amount" className="md:w-40 bg-blue-100" />
+      <InputText placeholder="Enter amount" className="bg-blue-100 md:w-40" />
       <Button label="Pay" className="edit" />
     </div>
   );
@@ -356,11 +356,11 @@ export const membersColumn = [
     header: 'Name',
     sort: true,
   },
-  // {
-  //   field: 'id',
-  //   header: 'ID',
-  //   sort: true,
-  // },
+  {
+    field: 'id',
+    header: 'ID',
+    sort: true,
+  },
   {
     field: 'taxNumber',
     header: 'Tax Number',
@@ -851,7 +851,7 @@ export const incidentData = [
     date: '11 Apr 2023 - 13 Apr 2023',
     priority: 'High',
     status: renderStatus('active'),
-    // details: ThreeDotsDetails(),
+    details: <BsThreeDotsVertical />,
   },
   {
     id: 2,
@@ -983,5 +983,120 @@ export const newsData = [
     status: renderStatus('active'),
     invoice_amount: '30',
     actionIcon: <TableActionIcon />,
+  },
+];
+
+// messsages pag
+export const messagesColumn = [
+  {
+    selectionMode: 'multiple',
+  },
+
+  {
+    // header: 'image',
+    body: ImageBodyTemplate,
+  },
+  {
+    field: 'name',
+    header: 'Members Name',
+    sort: false,
+  },
+  {
+    field: 'room',
+    header: 'Type',
+    sort: false,
+  },
+  {
+    field: 'name',
+    header: 'Unit',
+    sort: false,
+  },
+  {
+    field: 'date',
+    header: 'Date',
+    sort: false,
+  },
+  {
+    field: 'description',
+    header: 'Title',
+    sort: false,
+  },
+  {
+    field: 'status',
+    header: 'Status',
+    sort: false,
+  },
+  {
+    header: '',
+    field: 'details',
+  },
+];
+
+export const messagesData = [
+  {
+    id: 1,
+    image: '/images/table/proImg1.svg',
+    name: 'Harper Stevens',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('New'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 2,
+    image: '/images/table/proImg1.svg',
+    name: 'Ethan Smith',
+    room: 'Room 09',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 3,
+    image: '/images/table/proImg1.svg',
+    name: 'Ava Martinez',
+    room: 'Studio 11',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 4,
+    image: '/images/table/proImg1.svg',
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 5,
+    image: '/images/table/proImg1.svg',
+    name: 'Jackson Chen',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
+  },
+  {
+    id: 6,
+    image: '/images/table/proImg1.svg',
+    name: 'Ghostbusters',
+    room: 'Room 22',
+    description: 'Lorem ipsum is a ...',
+    date: '11 Apr 2023 - 13 Apr 2023',
+    priority: 'High',
+    status: renderStatus('active'),
+    details: <BsThreeDotsVertical />,
   },
 ];
