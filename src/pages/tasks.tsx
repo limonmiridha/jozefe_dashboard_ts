@@ -24,7 +24,7 @@ const tasks = () => {
         <div className="flex gap-3">
           <div
             className={`${
-              viewChange == 'table' && 'bg-blue-100 '
+              viewChange == 'table' && 'bg-blue-100'
             } px-3 py-1 rounded`}
           >
             <Button onClick={() => handleViewChange('table')}>
