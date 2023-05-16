@@ -7,8 +7,6 @@ import {
   generalAccountingCreditData,
   generalAccountingDebitColumn,
   generalAccountingDebitData,
-  incidentColumn,
-  incidentData,
 } from '@/data/TableData';
 import Image from 'next/image';
 import React from 'react';

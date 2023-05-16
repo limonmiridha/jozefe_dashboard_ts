@@ -36,7 +36,7 @@ const DashboardRightbar = () => {
         </div>
         <div className="flex items-center gap-3 -mt-3">
           <Image
-            src="/images/dashboradRightbar/network.svg"
+            src="/images/dashboardRightbar/network.svg"
             width={50}
             height={50}
             alt=""
@@ -47,7 +47,7 @@ const DashboardRightbar = () => {
             <div className="flex items-center gap-2">
               <h2 className=" text-2xl font-bold text-[#000]">200,000</h2>
               <Image
-                src="/images/dashboradRightbar/growChart.svg"
+                src="/images/dashboardRightbar/growChart.svg"
                 width={14}
                 height={14}
                 alt=""
@@ -107,7 +107,7 @@ const DashboardRightbar = () => {
           <div className="flex items-center justify-between relative z-20">
             <h3 className="text-lg font-bold text-white">200,000</h3>
             <Image
-              src="/images/dashboradRightbar/wave.svg"
+              src="/images/dashboardRightbar/wave.svg"
               width={70}
               height={70}
               className="pb-2 mt-3"
@@ -119,7 +119,7 @@ const DashboardRightbar = () => {
           Latest Transactions
         </p>
         <Transactions
-          icon="/images/dashboradRightbar/members.svg"
+          icon="/images/dashboardRightbar/members.svg"
           title1="Members Payment"
           title2="Today, 19:21 John Doe"
           title3="+154.50"
@@ -127,7 +127,7 @@ const DashboardRightbar = () => {
           color="text-[#0DDFA4]"
         />
         <Transactions
-          icon="/images/dashboradRightbar/property.svg"
+          icon="/images/dashboardRightbar/property.svg"
           title1="Property Payment"
           title2="23, Jun, 13:06"
           title3="+454.50"
@@ -135,7 +135,7 @@ const DashboardRightbar = () => {
           color="text-[#FF5762]"
         />
         <Transactions
-          icon="/images/dashboradRightbar/suppliers.svg"
+          icon="/images/dashboardRightbar/suppliers.svg"
           title1="Suppliers Payment"
           title2="03, July, 3:06"
           title3="+154.50"
@@ -143,7 +143,7 @@ const DashboardRightbar = () => {
           color="text-[#FF5762]"
         />
         <Transactions
-          icon="/images/dashboradRightbar/others.svg"
+          icon="/images/dashboardRightbar/others.svg"
           title1="Other Payment"
           title2="03, July, 3:06"
           title3="+154.50"

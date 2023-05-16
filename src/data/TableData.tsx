@@ -49,7 +49,7 @@ const renderInputButton = () => {
   return (
     <div className="flex gap-2">
       <InputText placeholder="Enter amount" className="bg-blue-100 md:w-40" />
-      <Button label="Pay" className="edit" />
+      <Button label="Pay" className="blue" />
     </div>
   );
 };
@@ -658,10 +658,10 @@ export const membersPaymentColumn = [
   },
 
   {
-    body: <Button label="Send Remainder" className="reminder" />,
+    body: <Button label="Send Remainder" className="cyan" />,
   },
   {
-    body: <Button label="View Member Profile" className="edit" />,
+    body: <Button label="View Member Profile" className="blue" />,
   },
 ];
 

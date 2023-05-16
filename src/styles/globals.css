@@ -72,7 +72,7 @@ body {
   filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
 }
 .bg-balance {
-  background-image: url('/images/bg-currency.svg');
+  background-image: url('/images/dashboardRightbar/bg-currency.svg');
   background-repeat: no-repeat;
   background-position: right;
   position: relative;
