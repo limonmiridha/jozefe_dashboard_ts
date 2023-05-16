@@ -1,0 +1,48 @@
+.ps-sidebar-container {
+  background: #fff !important;
+}
+.css-1wvake5 {
+  width: 270px !important;
+  min-width: 270px !important;
+}
+.css-1wvake5.ps-collapsed {
+  width: 80px !important;
+  min-width: 80px !important;
+}
+.css-1l5fxv3 {
+  width: 250px !important;
+  margin-top: 1rem !important;
+  padding: 1rem 0;
+}
+.menuItem:hover .normal-icon {
+  display: none;
+}
+.menuItem:hover .hover-icon {
+  display: block;
+}
+
+.sidebar li:hover a .ps-menu-suffix div {
+  background-color: #fff;
+  color: #333;
+}
+
+.css-in4fye {
+  margin-right: -4px !important;
+}
+.css-honxw6,
+.css-jn69v9 {
+  width: 10px !important;
+  height: 10px !important;
+}
+.subMenuItem .ps-menu-button:hover .normal-icons,
+.selected .normal-icon {
+  display: none;
+}
+.subMenuItem .ps-menu-button:hover .hover-icons,
+.selected .hover-icon {
+  display: block;
+}
+.subMenuItem .ps-menu-button:hover .css-honxw6,
+.subMenuItem .ps-menu-button:hover .css-jn69v9 {
+  color: #fff;
+}
