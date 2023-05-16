@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nivo/pie": "^0.83.0",
+    "@nivo/core": "^0.78.0",
+    "@nivo/pie": "^0.78.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
