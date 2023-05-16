@@ -68,7 +68,6 @@ abbr[title] {
   align-items: center;
   color: #1b2559;
   display: flex;
-  font-size: 12px;
   height: 34px !important;
   justify-content: center;
   padding: 0px !important;
@@ -136,4 +135,7 @@ button.react-calendar__navigation__label {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   color: white;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #017efb;
 }

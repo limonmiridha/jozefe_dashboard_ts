@@ -44,6 +44,7 @@ const BarCharts = ({ data }: any) => {
             }
             return <></>;
           }}
+          cursor={{ fill: 'transparent' }}
         />
         <Bar
           isAnimationActive={false}

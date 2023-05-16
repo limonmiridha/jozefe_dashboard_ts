@@ -26,7 +26,7 @@ const DashboardInventory = () => {
           <span className="h-4 w-4 rounded bg-cyan-500" /> Out
         </span>
       </div>
-      <div className="mt-12 h-96 w-full">
+      <div className="mt-12 h-80 w-full">
         <BarChart
           data={[
             {

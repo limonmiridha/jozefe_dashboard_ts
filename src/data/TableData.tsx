@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TableActionIcon from '@/components/TableActionIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { BsThreeDotsVertical } from 'react-icons/bs';
-import { Popover } from 'react-tiny-popover';
-import ThreeDotsDetails from '@/components/ThreeDotsDetails';
 
 const CustomButton = ({ label, className, onClick }: any) => {
   return <Button label={label} className={className} onClick={onClick} />;
@@ -41,9 +39,9 @@ const renderViewButton = () => {
 const actionTemplate = () => (
   <div className="flexs gap-2">
     <Link href="/memberProfile">
-      <CustomButton label="View" className="edit" />
+      <CustomButton label="View" className="blue" />
     </Link>
-    <CustomButton label="Delete" className="delete" />
+    <CustomButton label="Delete" className="pinkRed" />
   </div>
 );
 
@@ -438,6 +436,78 @@ export const membersData = [
   },
 ];
 // Accounting
+export const generalAccountingDebitColumn = [
+  {
+    field: 'category',
+    header: 'Category',
+    sort: true,
+  },
+  {
+    field: 'sub_category',
+    header: 'Sub Category',
+    sort: true,
+  },
+  {
+    field: 'recurrent',
+    header: 'Recurrent',
+  },
+  {
+    field: 'amount',
+    header: 'Amount',
+  },
+];
+export const generalAccountingDebitData = [
+  {
+    id: 1,
+    category: 'Work',
+    sub_category: 'Drainage',
+    recurrent: '51 days',
+    amount: '$500',
+  },
+  {
+    id: 2,
+    category: 'Troubleshooting',
+    sub_category: 'Drainage',
+    recurrent: '32 days',
+    amount: '$500',
+  },
+];
+export const generalAccountingCreditColumn = [
+  {
+    field: 'category',
+    header: 'Category',
+    sort: true,
+  },
+  {
+    field: 'sub_category',
+    header: 'Sub Category',
+    sort: true,
+  },
+  {
+    field: 'recurrent',
+    header: 'Recurrent',
+  },
+  {
+    field: 'amount',
+    header: 'Amount',
+  },
+];
+export const generalAccountingCreditData = [
+  {
+    id: 1,
+    category: 'Work',
+    sub_category: 'Drainage',
+    recurrent: '51 days',
+    amount: '$500',
+  },
+  {
+    id: 2,
+    category: 'Troubleshooting',
+    sub_category: 'Drainage',
+    recurrent: '32 days',
+    amount: '$500',
+  },
+];
 export const rentalColumn = [
   {
     field: 'id',

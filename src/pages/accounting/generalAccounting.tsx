@@ -2,7 +2,14 @@ import Button from '@/components/Button';
 import Card from '@/components/GlobalCard';
 import GlobalDataTable from '@/components/GlobalDataTable';
 import { InnerHeader, TitleHeader } from '@/components/Headers';
-import { incidentColumn, incidentData } from '@/data/TableData';
+import {
+  generalAccountingCreditColumn,
+  generalAccountingCreditData,
+  generalAccountingDebitColumn,
+  generalAccountingDebitData,
+  incidentColumn,
+  incidentData,
+} from '@/data/TableData';
 import Image from 'next/image';
 import React from 'react';
 
@@ -16,33 +23,31 @@ const generalAccounting = () => {
       <InnerHeader>Common Property Charge Accounting</InnerHeader>
       <div className="grid lg:grid-cols-2 gap-4">
         <GlobalDataTable
-          data={incidentData}
-          column={incidentColumn}
+          data={generalAccountingDebitData}
+          column={generalAccountingDebitColumn}
           tableTitle="Debit"
           titleImg="/images/incidents/incidentsBg.svg"
-          tableHeader={true}
         />
         <GlobalDataTable
-          data={incidentData}
-          column={incidentColumn}
-          tableTitle="Debit"
+          data={generalAccountingCreditData}
+          column={generalAccountingCreditColumn}
+          tableTitle="Credit"
           titleImg="/images/incidents/incidentsBg.svg"
-          tableHeader={true}
         />
       </div>
       <InnerHeader>Private Member Accounting</InnerHeader>
       <div className="grid lg:grid-cols-2 gap-4">
         <GlobalDataTable
-          data={incidentData}
-          column={incidentColumn}
+          data={generalAccountingDebitData}
+          column={generalAccountingDebitColumn}
           tableTitle="Debit"
           titleImg="/images/incidents/incidentsBg.svg"
           tableHeader={true}
         />
         <GlobalDataTable
-          data={incidentData}
-          column={incidentColumn}
-          tableTitle="Debit"
+          data={generalAccountingCreditData}
+          column={generalAccountingCreditColumn}
+          tableTitle="Credit"
           titleImg="/images/incidents/incidentsBg.svg"
           tableHeader={true}
         />

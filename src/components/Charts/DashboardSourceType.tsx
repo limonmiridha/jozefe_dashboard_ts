@@ -35,8 +35,8 @@ const DashboardSourceType = ({ chart = CHART_DATA }) => {
         </div>
         <CurrencyBtn />
       </div>
-      <div className="h-64">
-        <PieChart data={CHART_DATA} value={'17k'} />
+      <div className="h-48">
+        <PieChart data={data} text="$17K" />
       </div>
       <div className="flex flex-col gap-4 px-4">
         {CHART_DATA.map(
@@ -74,3 +74,23 @@ const DashboardSourceType = ({ chart = CHART_DATA }) => {
 };
 
 export default DashboardSourceType;
+const data = [
+  {
+    id: 'pending',
+    label: 'Pending',
+    value: 561,
+    color: '#2466ff',
+  },
+  {
+    id: 'paid',
+    label: 'Paid',
+    value: 408,
+    color: '#20d6ff',
+  },
+  {
+    id: 'Closed/won',
+    label: 'Closed/won',
+    value: 324,
+    color: '#93f4ff',
+  },
+];

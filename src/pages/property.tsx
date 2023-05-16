@@ -167,7 +167,8 @@ const property = () => {
           column={memberCreditColumn}
           tableTitle="Common Bills Invoice (Credit)"
           titleImg="/images/property/credit.svg"
-          headerText={true}
+          currencyBtn
+          headerText
         />
       </div>
       <div className="my-4 bg-white rounded-lg">
@@ -184,7 +185,7 @@ const property = () => {
           column={memberPendingColumn}
           tableTitle="Member Pending Payment"
           titleImg="/images/property/credit.svg"
-          capsuleBtn={false}
+          currencyBtn
         />
       </div>
       {/* Limon */}

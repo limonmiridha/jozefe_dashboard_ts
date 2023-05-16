@@ -1,122 +1,72 @@
-import React, { useState } from 'react';
-import { Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
+import React from 'react';
+import { ResponsivePie } from '@nivo/pie';
 
-const PieCharts = ({ data, value: v }: any) => {
-  const [active, setActive] = useState(0);
+const PieChart = ({ data, width, text, fontSize, colors }: any) => {
+  const styles = {
+    root: {
+      // textAlign: 'center',
+      position: 'relative',
+      width: width,
+      height: '60vh',
+      margin: '0 auto',
+    },
+    overlay: {
+      position: 'absolute',
+      top: -75,
+      right: 40,
+      bottom: 0,
+      left: 40,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: fontSize,
 
-  const renderActiveShape = (properties: any) => {
-    const RADIAN = Math.PI / 180;
-    const {
-      cx,
-      cy,
-      name,
-      midAngle,
-      innerRadius,
-      outerRadius,
-      startAngle,
-      endAngle,
-      fill,
-      payload,
-      percent,
-      value,
-    } = properties;
-    const sin = Math.sin(-RADIAN * midAngle);
-    const cos = Math.cos(-RADIAN * midAngle);
-    const sx = cx + (outerRadius + 10) * cos;
-    const sy = cy + (outerRadius + 10) * sin;
-    const mx = cx + (outerRadius + 30) * cos;
-    const my = cy + (outerRadius + 30) * sin;
-    const ex = mx + (cos >= 0 ? 1 : -1) * 22;
-    const ey = my;
-    const d = `M${sx},${sy}L${mx},${my}L${ex},${ey}`;
-    const textAnchor = cos >= 0 ? 'start' : 'end';
-    return (
-      <g>
-        <text
-          x={cx}
-          y={cy}
-          dy={10}
-          textAnchor="middle"
-          className="text-3xl font-bold text-black/75"
-          fill={'current' || 'black'}
-        >
-          {v}
-        </text>
-        <Sector
-          cx={cx}
-          cy={cy}
-          innerRadius={innerRadius - 10}
-          outerRadius={innerRadius}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          fill={'#d9ecffa5'}
-        />
-        <Sector
-          cx={cx}
-          cy={cy}
-          innerRadius={innerRadius}
-          outerRadius={outerRadius}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          fill={fill}
-        />
-        <Sector
-          cx={cx}
-          cy={cy}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          innerRadius={outerRadius}
-          outerRadius={outerRadius + 10}
-          fill={'#d9ecffa5'}
-        />
-        {active > 0 && (
-          <>
-            <path d={d} stroke={fill} fill="none" />
-            <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-            <text
-              x={ex + (cos >= 0 ? 1 : -1) * 12}
-              y={ey}
-              textAnchor={textAnchor}
-              className="text-xs"
-              fill="#333"
-            >{`${name} ${value}`}</text>
-            <text
-              x={ex + (cos >= 0 ? 1 : -1) * 12}
-              y={ey}
-              dy={18}
-              className="text-xs font-extralight"
-              textAnchor={textAnchor}
-              fill="#999"
-            >
-              {`(${(percent * 100).toFixed(2)}%)`}
-            </text>
-          </>
-        )}
-      </g>
-    );
+      // background: "#FFFFFF33",
+      textAlign: 'center',
+      // This is important to preserve the chart interactivity
+      pointerEvents: 'none',
+    },
   };
+
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <PieChart width={360} height={360}>
-        <Pie
-          activeIndex={active}
-          activeShape={renderActiveShape}
-          data={data}
-          cx="50%"
-          cy="50%"
-          innerRadius={50}
-          outerRadius={80}
-          dataKey="value"
-          onMouseEnter={(_, index) => {
-            setActive(index);
-          }}
-          onMouseLeave={() => {
-            setActive(0);
-          }}
-        />
-      </PieChart>
-    </ResponsiveContainer>
+    <div className="max-h-64 root">
+      <ResponsivePie
+        data={data}
+        // colors={['#E5FEF4', '#0DDFA4']}
+        margin={{ top: -40, right: 40, bottom: 40, left: 40 }}
+        innerRadius={0.7}
+        cornerRadius={0}
+        activeOuterRadiusOffset={8}
+        // colors={{ scheme: 'nivo' }}
+        // colors={{ scheme: 'paired' }}
+        colors={colors ? colors : (d: any) => d.data.color}
+        // borderWidth={1}
+        borderColor={{
+          from: 'color',
+          modifiers: [['darker', 0.2]],
+        }}
+        enableArcLinkLabels={false}
+        arcLinkLabelsSkipAngle={8}
+        arcLinkLabelsTextOffset={8}
+        arcLinkLabelsTextColor={{ from: 'color', modifiers: [] }}
+        arcLinkLabelsOffset={-5}
+        arcLinkLabelsDiagonalLength={23}
+        arcLinkLabelsStraightLength={15}
+        arcLinkLabelsThickness={10}
+        arcLinkLabelsColor={{ from: 'color' }}
+        enableArcLabels={false}
+        arcLabelsSkipAngle={10}
+        arcLabelsTextColor={{
+          from: 'color',
+          modifiers: [['darker', 1.7]],
+        }}
+      />
+      <div className="overlay">
+        <span className="font-bold">{text}</span>
+      </div>
+    </div>
   );
 };
 
-export default PieCharts;
+export default PieChart;

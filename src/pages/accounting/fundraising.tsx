@@ -2,7 +2,7 @@ import Card from '@/components/GlobalCard';
 import GlobalDataTable from '@/components/GlobalDataTable';
 import { TitleHeader } from '@/components/Headers';
 import InfoCards from '@/components/InfoCards';
-import { dashboardCards, incidentsCards } from '@/data/CardsData';
+import { dashboardCards } from '@/data/CardsData';
 import { membersPaymentColumn, membersPaymentData } from '@/data/TableData';
 import React from 'react';
 
